@@ -125,3 +125,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 AUTH_USER_MODEL = 'vaccination_app.Login'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
