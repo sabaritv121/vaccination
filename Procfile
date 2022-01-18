@@ -1,0 +1,1 @@
+web: gunicorn vaccination_management.wsgi --log-file -
