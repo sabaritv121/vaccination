@@ -1,0 +1,43 @@
+{% extends 'admintemp/base.html' %}
+{% block content %}
+
+<div class="col-lg-10">
+    {% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">REPORT CARD </strong>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">SI No</th>
+                    <th scope="col">Child Name</th>
+                    <th scope="col">Child Age</th>
+                    <th scope="col"> Address</th>
+                    <th scope="col">Vaccine Name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for n in card %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{n.patient.child_name}}</td>
+                    <td>{{n.patient.child_age}}</td>
+                    <td>{{n.patient.address}}</td>
+                    <td>{{n.vaccine}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'usertemplates/base.html' %}
+{% block content %}
+
+<div class="col-lg-10">
+    {% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">REPORT CARD </strong>
+        </div>
+        <br>
+        {% for i in card %}
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title">
+                        ReportCard Id:{{i.id}}
+                    </strong>
+                </div>
+                <div class="card-body">
+                    <!-- Credit Card -->
+                    <div id="pay-invoice">
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <label>Patient Name</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>: {{i.patient.child_name}}</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <label>Patient Age</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>: {{i.patient.child_age}}</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <label>Address</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>: {{i.patient.address}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <label>Vaccine Name</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>: {{i.vaccine}}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- .card -->
+
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
