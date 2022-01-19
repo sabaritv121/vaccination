@@ -25,7 +25,7 @@ SECRET_KEY = '5-%x&e*b!or@)5q*#9!(m*l!t0#ljun%p(w1-0^k#s^#fi*8#_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','vaccinat.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
